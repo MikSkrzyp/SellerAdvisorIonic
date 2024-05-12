@@ -1,0 +1,172 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Mikolaj_2\\Desktop\\SellerAdvisorIonic\\SellerAnalystIonic\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BB0437BB-B647-4842-8121-980FE632F1AD}|SellerAnalystIonic\\SellerAnalystIonic.csproj|c:\\users\\mikolaj_2\\desktop\\selleradvisorionic\\selleranalystionic\\selleranalystionic\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB0437BB-B647-4842-8121-980FE632F1AD}|SellerAnalystIonic\\SellerAnalystIonic.csproj|solutionrelative:selleranalystionic\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB0437BB-B647-4842-8121-980FE632F1AD}|SellerAnalystIonic\\SellerAnalystIonic.csproj|c:\\users\\mikolaj_2\\desktop\\selleradvisorionic\\selleranalystionic\\selleranalystionic\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BB0437BB-B647-4842-8121-980FE632F1AD}|SellerAnalystIonic\\SellerAnalystIonic.csproj|solutionrelative:selleranalystionic\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB0437BB-B647-4842-8121-980FE632F1AD}|SellerAnalystIonic\\SellerAnalystIonic.csproj|c:\\users\\mikolaj_2\\desktop\\selleradvisorionic\\selleranalystionic\\selleranalystionic\\selleranalystionic.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{BB0437BB-B647-4842-8121-980FE632F1AD}|SellerAnalystIonic\\SellerAnalystIonic.csproj|solutionrelative:selleranalystionic\\selleranalystionic.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB0437BB-B647-4842-8121-980FE632F1AD}|SellerAnalystIonic\\SellerAnalystIonic.csproj|c:\\users\\mikolaj_2\\desktop\\selleradvisorionic\\selleranalystionic\\selleranalystionic\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BB0437BB-B647-4842-8121-980FE632F1AD}|SellerAnalystIonic\\SellerAnalystIonic.csproj|solutionrelative:selleranalystionic\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB0437BB-B647-4842-8121-980FE632F1AD}|SellerAnalystIonic\\SellerAnalystIonic.csproj|c:\\users\\mikolaj_2\\desktop\\selleradvisorionic\\selleranalystionic\\selleranalystionic\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB0437BB-B647-4842-8121-980FE632F1AD}|SellerAnalystIonic\\SellerAnalystIonic.csproj|solutionrelative:selleranalystionic\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB0437BB-B647-4842-8121-980FE632F1AD}|SellerAnalystIonic\\SellerAnalystIonic.csproj|c:\\users\\mikolaj_2\\desktop\\selleradvisorionic\\selleranalystionic\\selleranalystionic\\controllers\\itemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB0437BB-B647-4842-8121-980FE632F1AD}|SellerAnalystIonic\\SellerAnalystIonic.csproj|solutionrelative:selleranalystionic\\controllers\\itemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB0437BB-B647-4842-8121-980FE632F1AD}|SellerAnalystIonic\\SellerAnalystIonic.csproj|c:\\users\\mikolaj_2\\desktop\\selleradvisorionic\\selleranalystionic\\selleranalystionic\\models\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB0437BB-B647-4842-8121-980FE632F1AD}|SellerAnalystIonic\\SellerAnalystIonic.csproj|solutionrelative:selleranalystionic\\models\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB0437BB-B647-4842-8121-980FE632F1AD}|SellerAnalystIonic\\SellerAnalystIonic.csproj|c:\\users\\mikolaj_2\\desktop\\selleradvisorionic\\selleranalystionic\\selleranalystionic\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB0437BB-B647-4842-8121-980FE632F1AD}|SellerAnalystIonic\\SellerAnalystIonic.csproj|solutionrelative:selleranalystionic\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB0437BB-B647-4842-8121-980FE632F1AD}|SellerAnalystIonic\\SellerAnalystIonic.csproj|c:\\users\\mikolaj_2\\desktop\\selleradvisorionic\\selleranalystionic\\selleranalystionic\\migrations\\20240512104224_1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB0437BB-B647-4842-8121-980FE632F1AD}|SellerAnalystIonic\\SellerAnalystIonic.csproj|solutionrelative:selleranalystionic\\migrations\\20240512104224_1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\Mikolaj_2\\Desktop\\SellerAdvisorIonic\\SellerAnalystIonic\\SellerAnalystIonic\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "SellerAnalystIonic\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\Mikolaj_2\\Desktop\\SellerAdvisorIonic\\SellerAnalystIonic\\SellerAnalystIonic\\Properties\\launchSettings.json",
+              "RelativeToolTip": "SellerAnalystIonic\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-12T10:51:38.125Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SellerAnalystIonic",
+              "DocumentMoniker": "C:\\Users\\Mikolaj_2\\Desktop\\SellerAdvisorIonic\\SellerAnalystIonic\\SellerAnalystIonic\\SellerAnalystIonic.csproj",
+              "RelativeDocumentMoniker": "SellerAnalystIonic\\SellerAnalystIonic.csproj",
+              "ToolTip": "C:\\Users\\Mikolaj_2\\Desktop\\SellerAdvisorIonic\\SellerAnalystIonic\\SellerAnalystIonic\\SellerAnalystIonic.csproj",
+              "RelativeToolTip": "SellerAnalystIonic\\SellerAnalystIonic.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-05-12T10:51:28.803Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "20240512104224_1.cs",
+              "DocumentMoniker": "C:\\Users\\Mikolaj_2\\Desktop\\SellerAdvisorIonic\\SellerAnalystIonic\\SellerAnalystIonic\\Migrations\\20240512104224_1.cs",
+              "RelativeDocumentMoniker": "SellerAnalystIonic\\Migrations\\20240512104224_1.cs",
+              "ToolTip": "C:\\Users\\Mikolaj_2\\Desktop\\SellerAdvisorIonic\\SellerAnalystIonic\\SellerAnalystIonic\\Migrations\\20240512104224_1.cs",
+              "RelativeToolTip": "SellerAnalystIonic\\Migrations\\20240512104224_1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-12T10:42:24.769Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Users\\Mikolaj_2\\Desktop\\SellerAdvisorIonic\\SellerAnalystIonic\\SellerAnalystIonic\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "SellerAnalystIonic\\WeatherForecast.cs",
+              "ToolTip": "C:\\Users\\Mikolaj_2\\Desktop\\SellerAdvisorIonic\\SellerAnalystIonic\\SellerAnalystIonic\\WeatherForecast.cs",
+              "RelativeToolTip": "SellerAnalystIonic\\WeatherForecast.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-12T10:42:15.514Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Mikolaj_2\\Desktop\\SellerAdvisorIonic\\SellerAnalystIonic\\SellerAnalystIonic\\appsettings.json",
+              "RelativeDocumentMoniker": "SellerAnalystIonic\\appsettings.json",
+              "ToolTip": "C:\\Users\\Mikolaj_2\\Desktop\\SellerAdvisorIonic\\SellerAnalystIonic\\SellerAnalystIonic\\appsettings.json",
+              "RelativeToolTip": "SellerAnalystIonic\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-12T10:35:03.386Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Mikolaj_2\\Desktop\\SellerAdvisorIonic\\SellerAnalystIonic\\SellerAnalystIonic\\Program.cs",
+              "RelativeDocumentMoniker": "SellerAnalystIonic\\Program.cs",
+              "ToolTip": "C:\\Users\\Mikolaj_2\\Desktop\\SellerAdvisorIonic\\SellerAnalystIonic\\SellerAnalystIonic\\Program.cs",
+              "RelativeToolTip": "SellerAnalystIonic\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-12T10:36:49.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DataContext.cs",
+              "DocumentMoniker": "C:\\Users\\Mikolaj_2\\Desktop\\SellerAdvisorIonic\\SellerAnalystIonic\\SellerAnalystIonic\\Data\\DataContext.cs",
+              "RelativeDocumentMoniker": "SellerAnalystIonic\\Data\\DataContext.cs",
+              "ToolTip": "C:\\Users\\Mikolaj_2\\Desktop\\SellerAdvisorIonic\\SellerAnalystIonic\\SellerAnalystIonic\\Data\\DataContext.cs",
+              "RelativeToolTip": "SellerAnalystIonic\\Data\\DataContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-12T10:35:18.629Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ItemsController.cs",
+              "DocumentMoniker": "C:\\Users\\Mikolaj_2\\Desktop\\SellerAdvisorIonic\\SellerAnalystIonic\\SellerAnalystIonic\\Controllers\\ItemsController.cs",
+              "RelativeDocumentMoniker": "SellerAnalystIonic\\Controllers\\ItemsController.cs",
+              "ToolTip": "C:\\Users\\Mikolaj_2\\Desktop\\SellerAdvisorIonic\\SellerAnalystIonic\\SellerAnalystIonic\\Controllers\\ItemsController.cs",
+              "RelativeToolTip": "SellerAnalystIonic\\Controllers\\ItemsController.cs",
+              "ViewState": "AQIAADQAAAAAAAAAAADwvwMAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-12T10:33:10.233Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Item.cs",
+              "DocumentMoniker": "C:\\Users\\Mikolaj_2\\Desktop\\SellerAdvisorIonic\\SellerAnalystIonic\\SellerAnalystIonic\\Models\\Item.cs",
+              "RelativeDocumentMoniker": "SellerAnalystIonic\\Models\\Item.cs",
+              "ToolTip": "C:\\Users\\Mikolaj_2\\Desktop\\SellerAdvisorIonic\\SellerAnalystIonic\\SellerAnalystIonic\\Models\\Item.cs",
+              "RelativeToolTip": "SellerAnalystIonic\\Models\\Item.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-12T10:32:31.08Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

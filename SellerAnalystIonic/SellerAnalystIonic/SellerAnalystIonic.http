@@ -1,0 +1,6 @@
+@SellerAnalystIonic_HostAddress = http://localhost:5258
+
+GET {{SellerAnalystIonic_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
