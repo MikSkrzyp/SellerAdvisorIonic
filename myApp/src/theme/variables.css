@@ -1,2 +1,23 @@
 /* For information on how to create your own theme, please see:
 http://ionicframework.com/docs/theming/ */
+/* Light theme variables (default) */
+:root {
+    --background-color: #fff;
+    --text-color: #333;
+    --secondary-text-color: #666;
+    --button-color: #3880ff;
+    --button-text-color: #fff;
+    --border-color: #ccc;
+}
+
+/* Dark theme variables */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #121212;
+        --text-color: #fff;
+        --secondary-text-color: #aaa;
+        --button-color: #4e8cff;
+        --button-text-color: #fff;
+        --border-color: #333;
+    }
+}

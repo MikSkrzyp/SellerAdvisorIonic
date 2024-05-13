@@ -1,0 +1,56 @@
+/* src/assets/css/home.css */
+.page-container {
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.toolbar-title {
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.search-bar {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    --ion-color-base: var(--background-color);
+    --ion-color-contrast: var(--text-color);
+}
+
+.item-label h2 {
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.item-label p {
+    font-size: 1rem;
+    color: var(--secondary-text-color);
+}
+
+.item-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+ion-button {
+    --ion-color-primary: var(--button-color);
+    --ion-color-primary-contrast: var(--button-text-color);
+}
+ion-toolbar ion-title {
+    padding-top: 16px; /* Increase top padding */
+    font-size: 1.5rem; /* Optional: Adjust the font size if needed */
+}
+
+@media (max-width: 768px) {
+    .toolbar-title {
+        font-size: 1.2rem;
+    }
+
+    .item-label h2 {
+        font-size: 1rem;
+    }
+
+    .item-label p {
+        font-size: 0.8rem;
+    }
+}
