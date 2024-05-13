@@ -1,33 +1,24 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
-import TabsPage from '../views/TabsPage.vue'
+import Home from "@/views/Home.vue";
+import PostItem from "@/views/PostItem.vue";
+import EditItem from "@/views/EditItem.vue";
+
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: '/tabs/tab1'
+    component:Home
   },
   {
-    path: '/tabs/',
-    component: TabsPage,
-    children: [
-      {
-        path: '',
-        redirect: '/tabs/tab1'
-      },
-      {
-        path: 'tab1',
-        component: () => import('@/views/Tab1Page.vue')
-      },
-      {
-        path: 'tab2',
-        component: () => import('@/views/Tab2Page.vue')
-      },
-      {
-        path: 'tab3',
-        component: () => import('@/views/Tab3Page.vue')
-      }
-    ]
+    path: '/postItem',
+    component: PostItem
+  },
+  {
+    path: '/edit-item/:id',
+    name: 'EditItem',
+    component: EditItem,
+    props: true // Enable passing params as props
   }
 ]
 
