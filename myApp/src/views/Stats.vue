@@ -1,35 +1,3 @@
-<template>
-  <ion-page>
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Product Statistics</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content class="ion-padding">
-      <!-- Statistics Card for Average, Median, STD -->
-      <ion-card>
-        <ion-card-header>
-          <ion-card-title>Aggregate Statistics</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-          <p>Average Price: ${{ stats.average.toFixed(2) }}</p>
-          <p>Median Price: ${{ stats.median.toFixed(2) }}</p>
-          <p>Standard Deviation: ${{ stats.stdDev.toFixed(2) }}</p>
-        </ion-card-content>
-      </ion-card>
-      <!-- Chart Section -->
-      <ion-card>
-        <ion-card-header>
-          <ion-card-title>Price per Product</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-          <canvas id="priceChart"></canvas>
-        </ion-card-content>
-      </ion-card>
-    </ion-content>
-  </ion-page>
-</template>
-
 <script setup>
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonCardHeader, IonCardTitle, IonCardContent } from '@ionic/vue';
 import { ref, onMounted } from 'vue';
@@ -66,7 +34,6 @@ const calculateStatistics = (items) => {
   stats.value.stdDev = Math.sqrt(prices.map(x => Math.pow(x - mean, 2)).reduce((a, b) => a + b) / prices.length);
 };
 
-// Setup chart
 // Setup chart
 const setupChart = (items) => {
   const ctx = document.getElementById('priceChart').getContext('2d');
@@ -148,8 +115,42 @@ const setupChart = (items) => {
 onMounted(fetchItemsAndSetupChart);
 </script>
 
+<template>
+  <ion-page>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Product Statistics</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <!-- Statistics Card for Average, Median, STD -->
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Aggregate Statistics</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>Average Price: ${{ stats.average.toFixed(2) }}</p>
+          <p>Median Price: ${{ stats.median.toFixed(2) }}</p>
+          <p>Standard Deviation: ${{ stats.stdDev.toFixed(2) }}</p>
+        </ion-card-content>
+      </ion-card>
+      <!-- Chart Section -->
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Price per Product</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <canvas id="priceChart"></canvas>
+        </ion-card-content>
+      </ion-card>
+    </ion-content>
+  </ion-page>
+</template>
+
+
+
 <style scoped>
 canvas {
-  height: 400px; /* Fixed height for chart */
+  height: 400px;
 }
 </style>

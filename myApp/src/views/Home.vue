@@ -1,36 +1,3 @@
-<template>
-  <ion-page class="page-container">
-    <ion-header>
-      <ion-toolbar>
-        <ion-title class="toolbar-title">Items</ion-title>
-        <ion-searchbar v-model="searchText" @ionChange="filterItems" placeholder="Search by name" class="search-bar"></ion-searchbar>
-        <ion-buttons slot="end">
-          <ion-button @click="navigateToPostItem">Add Item</ion-button>
-        </ion-buttons>
-        <ion-button slot="end" @click="navigateToStats">View Stats</ion-button>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content :fullscreen="true">
-      <ion-list>
-        <ion-item v-for="item in filteredItems" :key="item.id">
-          <ion-label class="item-label">
-            <h2>{{ item.object }}</h2>
-            <p>Price: ${{ item.price }}</p>
-          </ion-label>
-          <div class="item-buttons">
-            <ion-button @click="navigateToEdit(item.id)" color="secondary">
-              Modify
-            </ion-button>
-            <ion-button @click="deleteItem(item.id)" color="danger" fill="outline">
-              Delete
-            </ion-button>
-          </div>
-        </ion-item>
-      </ion-list>
-    </ion-content>
-  </ion-page>
-</template>
-
 <script setup>
 import {onMounted, ref, computed} from 'vue';
 import {
@@ -38,7 +5,6 @@ import {
 } from '@ionic/vue';
 import axios from 'axios';
 import {useRouter } from 'vue-router';
-import '../Css/Home.css'
 import  '../theme/variables.css'
 
 const items = ref([]);
@@ -86,3 +52,42 @@ const filteredItems = computed(() => {
   );
 });
 </script>
+
+<template>
+  <ion-page class="page-container">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title class="toolbar-title">Items</ion-title>
+      </ion-toolbar>
+      <ion-toolbar>
+        <ion-searchbar v-model="searchText" @ionChange="filterItems" placeholder="Search by name" class="search-bar"></ion-searchbar>
+      </ion-toolbar>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-button @click="navigateToPostItem">Add Item</ion-button>
+          <ion-button @click="navigateToStats">View Stats</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content :fullscreen="true">
+      <ion-list>
+        <ion-item v-for="item in filteredItems" :key="item.id">
+          <ion-label class="item-label">
+            <h2>{{ item.object }}</h2>
+            <p>Price: ${{ item.price }}</p>
+          </ion-label>
+          <div class="item-buttons">
+            <ion-button @click="navigateToEdit(item.id)" color="secondary">
+              Modify
+            </ion-button>
+            <ion-button @click="deleteItem(item.id)" color="danger" fill="outline">
+              Delete
+            </ion-button>
+          </div>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-page>
+</template>
+
+

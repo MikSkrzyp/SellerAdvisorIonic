@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SellerAnalystIonic")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+662178884714c8b8e7a25a782f9f6b53f07a382f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+298e123b44f5c42b5f7c8e479692665cafe6d38d")]
 [assembly: System.Reflection.AssemblyProductAttribute("SellerAnalystIonic")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SellerAnalystIonic")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
