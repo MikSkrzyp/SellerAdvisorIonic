@@ -1,0 +1,27 @@
+npm install -g @ionic/cli
+ionic integrations enable capacitor
+npx cap init   usunac przed tym capacitor.config.ts
+ionic build   i w capacitor.config.ts zmienic dir na to co w dist
+npx cap add android
+npx cap copy android
+npx cap sync android
+npx cap open android
+
+
+
+after changes
+
+# Rebuild the project to reflect changes in the web assets
+ionic build
+
+# Copy the updated web assets to the Android platform
+npx cap copy android
+
+# Sync Capacitor configuration and plugins if there are changes related to plugins or configuration
+npx cap sync android
+
+# Open the updated project in Android Studio for testing
+npx cap open android
+
+# (Optional) Serve the project with live reload for front-end changes without Capacitor
+ionic serve
