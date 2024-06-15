@@ -1,0 +1,31 @@
+version: '3.8'
+
+networks:
+  ionic-network:
+
+services:
+  seller-api:
+    # image: sellerreg.azurecr.io/seller-api:latest
+    build:
+      context: ./SellerAnalystIonic/SellerAnalystIonic
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"   
+    depends_on:
+      - db
+    networks:
+      - ionic-network
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=db;Database=SellerAnalyst;User Id=sa;Password=YourStrong!Passw0rd;TrustServerCertificate=True;
+
+  db:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      - SA_PASSWORD=YourStrong!Passw0rd
+      - ACCEPT_EULA=Y
+    ports:
+      - "1433:1433"
+    networks:
+      - ionic-network
+

@@ -3,6 +3,7 @@ import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonCardH
 import { ref, onMounted } from 'vue';
 import Chart from 'chart.js/auto';
 import axios from 'axios';
+import {API_URL} from "@/conf.js";
 
 const stats = ref({
   average: 0,
@@ -14,7 +15,7 @@ const chartRef = ref(null);
 // Fetch items and calculate statistics
 const fetchItemsAndSetupChart = async () => {
   try {
-    const response = await axios.get('https://localhost:7158/Items');
+    const response = await axios.get(`${API_URL}/Items`);
     const items = response.data;
     calculateStatistics(items);
     setupChart(items);

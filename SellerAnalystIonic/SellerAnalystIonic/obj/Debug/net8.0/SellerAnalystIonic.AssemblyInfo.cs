@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("060ef5cd-4591-49ea-89ef-c771b81b0d0a")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("SellerAnalystIonic")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+298e123b44f5c42b5f7c8e479692665cafe6d38d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+133ee8cd602fcebea59a3d4656cb80574c2ca330")]
 [assembly: System.Reflection.AssemblyProductAttribute("SellerAnalystIonic")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SellerAnalystIonic")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

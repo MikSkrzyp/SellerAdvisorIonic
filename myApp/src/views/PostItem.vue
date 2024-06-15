@@ -1,19 +1,35 @@
 <script setup>
-import {IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonItem, IonLabel, IonInput, IonButton} from '@ionic/vue';
-import {ref} from 'vue';
-import {useRouter} from 'vue-router';
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonItem, IonLabel, IonInput, IonButton } from '@ionic/vue';
+import { ref } from 'vue';
+import { useRouter, useRoute } from 'vue-router';
 import axios from 'axios';
+import { API_URL } from "@/conf.js";
 
 const router = useRouter();
+const route = useRoute();
 const item = ref({
-  object: '',
-  price: 0
+  object: route.query.name || '',
+  price: route.query.price || 0,
+  save: route.query.save
 });
 
 const postItem = async () => {
   try {
-    await axios.post('https://localhost:7158/Items', item.value);
+    await axios.post(`${API_URL}/Items`, item.value);
     alert('Item posted successfully');
+
+    if(item.value.save!==null){
+      try {
+        await axios.post(`${API_URL}/api/Products`, {
+          barcode: item.value.save,
+          name: item.value.object,
+          price: item.value.price
+        });
+        alert('Product posted successfully');
+      } catch (error) {
+        alert('Failed to post product: ' + error.message);
+      }
+    }
     router.push('/').then(() => {
       location.reload();
     });
@@ -46,8 +62,6 @@ const postItem = async () => {
     </ion-content>
   </ion-page>
 </template>
-
-
 
 <style scoped>
 .custom-label {

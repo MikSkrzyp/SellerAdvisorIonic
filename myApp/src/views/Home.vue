@@ -6,9 +6,12 @@ import {
 import axios from 'axios';
 import {useRouter } from 'vue-router';
 import  '../theme/variables.css'
+import {API_URL} from "@/conf.js";
+import {BarcodeScanner} from "@capacitor-mlkit/barcode-scanning";
 
 const items = ref([]);
 const searchText = ref('');
+const isSupported = ref(false);
 
 const router = useRouter();
 
@@ -24,9 +27,14 @@ const navigateToPostItem = () => {
   router.push('/postItem');
 };
 
+const navigateToScanner = () => {
+  router.push({ name: 'ScannerView' });
+};
+
 const fetchItems = async () => {
   try {
-    const response = await axios.get('https://localhost:7158/Items');
+    await checkSupport();
+    const response = await axios.get(`${API_URL}/Items`);
     items.value = response.data;
   } catch (error) {
     console.error('There was an error fetching the items:', error);
@@ -35,11 +43,21 @@ const fetchItems = async () => {
 
 const deleteItem = async (id) => {
   try {
-    await axios.delete(`https://localhost:7158/Items/${id}`);
+    await axios.delete(`${API_URL}/Items/${id}`);
     items.value = items.value.filter(item => item.id !== id);
     alert('Item deleted successfully');
   } catch (error) {
     alert('Failed to delete item: ' + error.message);
+  }
+};
+
+const checkSupport = async () => {
+  try {
+    const result = await BarcodeScanner.isSupported();
+    isSupported.value = result.supported;
+  } catch (error) {
+    console.error('Error checking if BarcodeScanner is supported:', error);
+    isSupported.value = false;
   }
 };
 
@@ -51,6 +69,7 @@ const filteredItems = computed(() => {
       item.object.toLowerCase().includes(searchText.value.toLowerCase())
   );
 });
+
 </script>
 
 <template>
@@ -65,6 +84,7 @@ const filteredItems = computed(() => {
       <ion-toolbar>
         <ion-buttons slot="start">
           <ion-button @click="navigateToPostItem">Add Item</ion-button>
+          <ion-button v-if="isSupported" @click="navigateToScanner">Scanner</ion-button>
           <ion-button @click="navigateToStats">View Stats</ion-button>
         </ion-buttons>
       </ion-toolbar>

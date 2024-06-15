@@ -3,6 +3,7 @@ import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonItem, IonLabel
 import { ref, onMounted } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import axios from 'axios';
+import {API_URL} from "@/conf.js";
 
 const route = useRoute();
 const router = useRouter();
@@ -10,7 +11,7 @@ const item = ref({ id: route.params.id, object: '', price: 0 });
 
 const fetchItem = async () => {
   try {
-    const response = await axios.get(`https://localhost:7158/Items/${item.value.id}`);
+    const response = await axios.get(`${API_URL}/Items/${item.value.id}`);
     item.value = response.data;
   } catch (error) {
     alert('Failed to load item: ' + error.message);
@@ -19,7 +20,7 @@ const fetchItem = async () => {
 
 const updateItem = async () => {
   try {
-    await axios.put(`https://localhost:7158/Items/${item.value.id}`, item.value);
+    await axios.put(`${API_URL}/Items/${item.value.id}`, item.value);
     alert('Item updated successfully');
     router.push('/').then(() => {
       location.reload();

@@ -4,6 +4,9 @@ import Home from "@/views/Home.vue";
 import PostItem from "@/views/PostItem.vue";
 import EditItem from "@/views/EditItem.vue";
 import Stats from "@/views/Stats.vue";
+import ScannerView from "@/views/ScannerView.vue";
+
+
 
 
 const routes: Array<RouteRecordRaw> = [
@@ -20,6 +23,11 @@ const routes: Array<RouteRecordRaw> = [
     name: 'EditItem',
     component: EditItem,
     props: true // Enable passing params as props
+  },
+  {
+    path : '/scanner',
+    name: 'ScannerView',
+    component: ScannerView
   },
   {
     path : '/stats',

@@ -10,7 +10,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowSpecificOrigin",
         builder =>
         {
-            builder.WithOrigins("http://localhost:8100")
+            builder.WithOrigins("*")
                    .AllowAnyHeader()
                    .AllowAnyMethod();
         });
@@ -31,6 +31,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+// Ensure database is created and migrations are applied
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var context = services.GetRequiredService<DataContext>();
+    context.Database.Migrate(); // Apply migrations, use EnsureCreated() for a simple database creation
+}
 
 app.UseCors("AllowSpecificOrigin");
 
@@ -40,4 +47,5 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run();
+app.Run("http://0.0.0.0:80");
+//app.Run();
