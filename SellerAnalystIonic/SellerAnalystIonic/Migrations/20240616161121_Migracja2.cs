@@ -5,7 +5,7 @@
 namespace SellerAnalystIonic.Migrations
 {
     /// <inheritdoc />
-    public partial class _1 : Migration
+    public partial class Migracja2 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -23,6 +23,19 @@ namespace SellerAnalystIonic.Migrations
                 {
                     table.PrimaryKey("PK_Items", x => x.ID);
                 });
+
+            migrationBuilder.CreateTable(
+                name: "Products",
+                columns: table => new
+                {
+                    Barcode = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Products", x => x.Barcode);
+                });
         }
 
         /// <inheritdoc />
@@ -30,6 +43,9 @@ namespace SellerAnalystIonic.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Items");
+
+            migrationBuilder.DropTable(
+                name: "Products");
         }
     }
 }

@@ -40,6 +40,23 @@ namespace SellerAnalystIonic.Migrations
 
                     b.ToTable("Items");
                 });
+
+            modelBuilder.Entity("SellerAnalystIonic.Models.Product", b =>
+                {
+                    b.Property<string>("Barcode")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("Barcode");
+
+                    b.ToTable("Products");
+                });
 #pragma warning restore 612, 618
         }
     }

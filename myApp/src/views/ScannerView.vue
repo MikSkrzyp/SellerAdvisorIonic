@@ -64,10 +64,10 @@ const scanFun = async () => {
     }
     const { barcodes: scannedBarcodes } = await BarcodeScanner.scan();
     const productData = await sendBarcodeData(scannedBarcodes);
-    if (productData.status!=404) {
-      router.push({ path: '/postItem', query: { name: productData.name, price: productData.price, saveProduct: null} });
+    if (productData.barcode === undefined) {
+      router.push({ path: '/postItem', query: { name: productData.name, price: productData.price, saveProduct: scannedBarcodes[0].rawValue } });
     }else{
-      router.push({ path: '/postItem', query: { name: productData.name, price: productData.price, saveProduct: scannedBarcodes[0].rawValue} });
+      router.push({ path: '/postItem', query: { name: productData.name, price: productData.price} });
     }
   } catch (error) {
     console.error('Error scanning barcode:', error);

@@ -8,9 +8,9 @@ import { API_URL } from "@/conf.js";
 const router = useRouter();
 const route = useRoute();
 const item = ref({
-  object: route.query.name || '',
+  object: route.query.name || 'dodaj nowy produkt do bazy',
   price: route.query.price || 0,
-  save: route.query.save
+  saveProduct: route.query.saveProduct || undefined
 });
 
 const postItem = async () => {
@@ -18,16 +18,16 @@ const postItem = async () => {
     await axios.post(`${API_URL}/Items`, item.value);
     alert('Item posted successfully');
 
-    if(item.value.save!==null){
+    if(item.value.saveProduct!==undefined){
       try {
         await axios.post(`${API_URL}/api/Products`, {
-          barcode: item.value.save,
+          barcode: item.value.saveProduct,
           name: item.value.object,
           price: item.value.price
         });
         alert('Product posted successfully');
       } catch (error) {
-        alert('Failed to post product: ' + error.message);
+        alert('Failed to post product: ' + error.message + ' ' + item.value.save);
       }
     }
     router.push('/').then(() => {

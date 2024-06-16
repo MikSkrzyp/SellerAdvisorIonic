@@ -11,8 +11,8 @@ using SellerAnalystIonic.Data;
 namespace SellerAnalystIonic.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240512104224_1")]
-    partial class _1
+    [Migration("20240616161121_Migracja2")]
+    partial class Migracja2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -42,6 +42,23 @@ namespace SellerAnalystIonic.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Items");
+                });
+
+            modelBuilder.Entity("SellerAnalystIonic.Models.Product", b =>
+                {
+                    b.Property<string>("Barcode")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("Barcode");
+
+                    b.ToTable("Products");
                 });
 #pragma warning restore 612, 618
         }
