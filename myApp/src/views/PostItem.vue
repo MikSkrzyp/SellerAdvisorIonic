@@ -1,45 +1,3 @@
-<script setup>
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonItem, IonLabel, IonInput, IonButton } from '@ionic/vue';
-import { ref } from 'vue';
-import { useRouter, useRoute } from 'vue-router';
-import axios from 'axios';
-import { API_URL } from "@/conf.js";
-
-const router = useRouter();
-const route = useRoute();
-const item = ref({
-  object: route.query.name || 'dodaj nowy produkt do bazy',
-  price: route.query.price || 0,
-  saveProduct: route.query.saveProduct || undefined
-});
-
-const postItem = async () => {
-  try {
-    await axios.post(`${API_URL}/Items`, item.value);
-    alert('Item posted successfully');
-
-    if(item.value.saveProduct!==undefined){
-      try {
-        await axios.post(`${API_URL}/api/Products`, {
-          barcode: item.value.saveProduct,
-          name: item.value.object,
-          price: item.value.price
-        });
-        alert('Product posted successfully');
-      } catch (error) {
-        alert('Failed to post product: ' + error.message + ' ' + item.value.save);
-      }
-    }
-    router.push('/').then(() => {
-      location.reload();
-    });
-    item.value = {object: '', price: 0}; // Reset form
-  } catch (error) {
-    alert('Failed to post item: ' + error.message);
-  }
-};
-</script>
-
 <template>
   <ion-page>
     <ion-header>
@@ -62,6 +20,55 @@ const postItem = async () => {
     </ion-content>
   </ion-page>
 </template>
+
+<script setup>
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonItem, IonLabel, IonInput, IonButton } from '@ionic/vue';
+import { ref} from 'vue';
+import {Haptics} from '@capacitor/haptics';
+import axios from 'axios';
+import {useRouter, useRoute} from 'vue-router';
+import {API_URL} from "@/conf.js";
+
+const router = useRouter();
+const route = useRoute();
+const item = ref({
+  object: route.query.name || '',
+  price: route.query.price || 0,
+  saveProduct: route.query.saveProduct || undefined
+});
+
+const postItem = async () => {
+  try {
+    await axios.post(`${API_URL}/Items`, item.value);
+    alert('Item posted successfully');
+
+    // Vibrate device
+    await Haptics.vibrate({
+      duration: 3000 //3000 miliseconds
+    });
+
+
+    if (item.value.saveProduct!==undefined) {
+      try {
+        await axios.post(`${API_URL}/api/Products`, {
+          barcode: item.value.saveProduct,
+          name: item.value.object,
+          price: item.value.price
+        });
+        alert('Product posted successfully');
+      } catch (error) {
+        alert('Failed to post product: ' + error.message);
+      }
+    }
+    router.push('/').then(() => {
+      location.reload();
+    });
+    item.value = {object: '', price: 0};
+  } catch (error) {
+    alert('Failed to post item: ' + error.message);
+  }
+};
+</script>
 
 <style scoped>
 .custom-label {
